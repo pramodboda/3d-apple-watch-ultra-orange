@@ -1,0 +1,135 @@
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* font-family: Arial, sans-serif; */
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: #999999;
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  /* font-size: clamp(1rem, 2.5vw, 1.5rem); */
+}
+
+.section {
+  /* height: 100vh; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+
+  /* font-size: 2em; */
+  /* transition: transform 0.5s ease-in-out; */
+  /* -webkit-transition: transform 0.5s ease-in-out; */
+  transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.section .text-content {
+  padding: 50px 20% 15px 20%;
+}
+
+.section .text-content {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.section .text-content .feature-list {
+  list-style: none;
+}
+.white-text {
+  color: #f9f9f9;
+}
+.orange-text {
+  color: #f56900;
+}
+.section .text-content .feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 3rem;
+}
+.section .text-content .feature-list li {
+  margin-bottom: 2.5rem;
+}
+
+.section .text-content h1,
+.section .text-content h2 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  color: #f9f9f9;
+}
+
+.section .text-content .typography-callout-stat {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#hero {
+  background: #333;
+
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/carbon_fibre.png");
+
+  text-align: center;
+}
+
+#feature1 {
+  /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/dark_stripes.png"); */
+  /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/crissXcross.png"); */
+  /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/dark_leather.png"); */
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/cartographer.png");
+}
+
+footer {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+#container3D {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  /* width: 50%; */
+  /* border: 1px solid red; */
+}
+h1 {
+  /* font-size: 4vw; */
+  line-height: 1.2;
+}
+
+footer a {
+  color: #f9f9f9;
+}
+
+@media screen and (max-width: 430px) {
+  .section .text-content {
+    padding: 15px 15px 15px 15px;
+  }
+  .section .text-content h1 {
+    font-size: 3rem;
+  }
+  .section .text-content h2 {
+    font-size: 2rem;
+  }
+  .section .text-content .typography-callout-stat {
+    font-size: 1.5rem;
+  }
+  .section .hide-content {
+    display: none;
+  }
+}
