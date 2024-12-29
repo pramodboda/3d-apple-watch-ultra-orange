@@ -16,6 +16,10 @@ let appleWatch;
 let mixer;
 
 const gltfLoader = new GLTFLoader();
+
+// Show loading spinner
+const loadingElement = document.getElementById("loading");
+
 gltfLoader.load(
   "dist/assets/3d-models/apple_watch_ultra_-_orange.glb",
   function (gltf) {
@@ -30,10 +34,25 @@ gltfLoader.load(
 
     mixer = new THREE.AnimationMixer(appleWatch);
     mixer.clipAction(gltf.animations[0]).play();
+
+    // Hide loading spinner
+    if (loadingElement) {
+      loadingElement.style.display = "none";
+    }
+
     modelMode();
   },
-  function (xhr) {},
-  function (error) {}
+  function (xhr) {
+    // Optionally, you can log the loading progress
+    console.log(`Model ${Math.round((xhr.loaded / xhr.total) * 100)}% loaded`);
+  },
+  function (error) {
+    console.error("An error occurred while loading the model", error);
+    // Optionally, hide the spinner and show an error message
+    if (loadingElement) {
+      loadingElement.style.display = "none";
+    }
+  }
 );
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
